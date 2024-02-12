@@ -23,7 +23,7 @@
         >
           <img
             class="img-fluid px-6 px-md-0"
-            :src="item.img"
+            :src="require(`../assets/img/${item.img}`)"
             :alt="item.imgAlt"
           />
         </div>
@@ -51,21 +51,21 @@ const items = [
     title: "Titulo 1",
     subtitle: "Subtitulo 1",
     text: "Texto de prueba",
-    img: "https://previews.123rf.com/images/abscent/abscent2002/abscent200200006/139267385-cirug%C3%ADa-personal-en-icono-uniforme-m%C3%A9dico-cirujano-con-mascarilla-asistencia-sanitaria.jpg",
+    img: "doctor.png",
     imgAlt: "Imagen",
   },
   {
     title: "Titulo 2",
     subtitle: "Subtitulo 2",
     text: "Texto de prueba",
-    img: "https://previews.123rf.com/images/abscent/abscent2002/abscent200200006/139267385-cirug%C3%ADa-personal-en-icono-uniforme-m%C3%A9dico-cirujano-con-mascarilla-asistencia-sanitaria.jpg",
+    img: "doctor.png",
     imgAlt: "Imagen",
   },
   {
     title: "Titulo 3",
     subtitle: "Subtitulo 3",
     text: "Texto de prueba",
-    img: "https://previews.123rf.com/images/abscent/abscent2002/abscent200200006/139267385-cirug%C3%ADa-personal-en-icono-uniforme-m%C3%A9dico-cirujano-con-mascarilla-asistencia-sanitaria.jpg",
+    img: "doctor.png",
     imgAlt: "Imagen",
   },
 ];
