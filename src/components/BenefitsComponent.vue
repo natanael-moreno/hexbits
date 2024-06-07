@@ -50,23 +50,29 @@ const items = [
   {
     title: "Titulo 1",
     subtitle: "Subtitulo 1",
-    text: "Texto de prueba",
+    text: "With Falcon as your guide, now you have a fine-tuned state of the earth tool to make your wireframe a reality.",
     img: "login.png",
     imgAlt: "Imagen",
   },
   {
     title: "Titulo 2",
     subtitle: "Subtitulo 2",
-    text: "Texto de prueba",
+    text: "With Falcon as your guide, now you have a fine-tuned state of the earth tool to make your wireframe a reality.",
     img: "login.png",
     imgAlt: "Imagen",
   },
   {
     title: "Titulo 3",
     subtitle: "Subtitulo 3",
-    text: "Texto de prueba",
+    text: "With Falcon as your guide, now you have a fine-tuned state of the earth tool to make your wireframe a reality.",
     img: "login.png",
     imgAlt: "Imagen",
   },
 ];
 </script>
+
+<style scoped>
+img{
+  border-radius: 10px;
+}
+</style>

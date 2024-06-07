@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav :class="{ scrolled: isScrolled }" class="navbar navbar-expand-lg">
     <div class="container-fluid container">
       <!-- Navbar -->
       <div class="d-flex justify-content-between w-100">
@@ -19,7 +19,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item" v-for="(item, key) in items" :key="key">
-            <a class="nav-link" :class="key == 0 ? 'active' : ''" aria-current="page" href="#">{{ item.name }}</a>
+            <a
+              class="nav-link"
+              :class="key == 0 ? 'active' : ''"
+              aria-current="page"
+              href="#"
+              >{{ item.name }}</a
+            >
           </li>
         </ul>
       </div>
@@ -29,11 +35,27 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isScrolled = ref(false);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+function handleScroll() {
+  isScrolled.value = window.scrollY > 0;
+}
+
 const items = [
-    {name: 'Inicio'},
-    {name: 'Conocenos'},
-    {name: 'Precios'},
-    {name: 'Contacto'},
+  { name: "Inicio" },
+  { name: "Conocenos" },
+  { name: "Precios" },
+  { name: "Contacto" },
 ];
 </script>
 
@@ -41,10 +63,11 @@ const items = [
 nav {
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 999;
   font-weight: 300;
-  padding: 30px;
+  padding: 20px;
   flex-direction: column;
+   transition: background-color 0.3s ease;
 }
 .nav-link {
   color: rgb(212, 212, 212);
@@ -53,4 +76,9 @@ nav {
 .nav-link:hover {
   color: white !important;
 }
+.scrolled {
+  background-color: #333;
+}
+
+
 </style>

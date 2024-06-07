@@ -17,8 +17,8 @@
       >
         <div class="content__text">
           <span>INTERIOR DESIGN COMPANY</span>
-          <h1>Experience Interior Design</h1>
-        </div>
+          <h1>Lorem ipsum dolor</h1>
+        </div> 
 
         <div class="content__cards row">
           <div class="col-4" v-for="(card, key) in cards" :key="key">
@@ -137,7 +137,7 @@ const carousel = [
 /* Text */
 .content__text {
   text-transform: uppercase;
-  width: 55%;
+  width: 59%;
   margin: 0 auto;
 }
 .content__text h1 {
@@ -166,5 +166,22 @@ const carousel = [
 
 .content__card span {
   color: rgb(43, 136, 148);
+}
+
+/* animations */
+
+.content__text > h1 {
+  overflow: hidden; 
+  border-right: 1px solid rgb(214, 214, 214);
+  white-space: nowrap;
+  animation: escribir 2s steps(40, end);
+}
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 </style>
